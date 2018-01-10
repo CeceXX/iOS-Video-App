@@ -35,14 +35,23 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="74K-j1-RZy">
                                                 <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
                                                 <state key="normal" title="&lt;&lt;"/>
+                                                <connections>
+                                                    <action selector="backwardsButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9nL-dN-HHB"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fOj-aN-RMi">
                                                 <rect key="frame" x="46" y="0.0" width="30" height="30"/>
                                                 <state key="normal" title="Play"/>
+                                                <connections>
+                                                    <action selector="playButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dLn-M3-wyL"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wFC-q2-kc7">
                                                 <rect key="frame" x="92" y="0.0" width="30" height="30"/>
                                                 <state key="normal" title="&gt;&gt;"/>
+                                                <connections>
+                                                    <action selector="forwardButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="i1Y-xN-CYz"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
