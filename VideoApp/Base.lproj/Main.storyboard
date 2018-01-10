@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +14,66 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="VideoApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cN8-M7-tTD">
+                                <rect key="frame" x="0.0" y="238" width="375" height="211"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="cN8-M7-tTD" secondAttribute="height" multiplier="16:9" id="MH3-f4-qmf"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s5N-dK-MfZ">
+                                <rect key="frame" x="0.0" y="607" width="375" height="60"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="K7w-zt-TSc">
+                                        <rect key="frame" x="126.5" y="15" width="122" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="74K-j1-RZy">
+                                                <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                                <state key="normal" title="&lt;&lt;"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fOj-aN-RMi">
+                                                <rect key="frame" x="46" y="0.0" width="30" height="30"/>
+                                                <state key="normal" title="Play"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wFC-q2-kc7">
+                                                <rect key="frame" x="92" y="0.0" width="30" height="30"/>
+                                                <state key="normal" title="&gt;&gt;"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="K7w-zt-TSc" firstAttribute="centerY" secondItem="s5N-dK-MfZ" secondAttribute="centerY" id="HHD-Je-6zc"/>
+                                    <constraint firstItem="K7w-zt-TSc" firstAttribute="centerX" secondItem="s5N-dK-MfZ" secondAttribute="centerX" id="IYi-Tu-Tff"/>
+                                    <constraint firstAttribute="height" constant="60" id="J1R-3o-hpO"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="cN8-M7-tTD" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="F2E-9S-VAH"/>
+                            <constraint firstItem="cN8-M7-tTD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="PWs-Wn-3kU"/>
+                            <constraint firstItem="cN8-M7-tTD" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="gv8-85-daP"/>
+                            <constraint firstItem="s5N-dK-MfZ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="h1C-Cz-dZW"/>
+                            <constraint firstItem="cN8-M7-tTD" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="nRP-yc-kk3"/>
+                            <constraint firstItem="s5N-dK-MfZ" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="qQj-Aw-Guu"/>
+                            <constraint firstItem="s5N-dK-MfZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="uXl-qK-zuo"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="videoView" destination="cN8-M7-tTD" id="1Dg-8w-Y3n"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
         </scene>
     </scenes>
 </document>

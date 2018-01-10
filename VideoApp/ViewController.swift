@@ -7,19 +7,33 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
 
+    var player: AVPlayer!
+    var playerLayer: AVPlayerLayer! // shows content to view
+    
+    @IBOutlet weak var videoView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        let url = URL(string: "https://content.jwplatform.com/manifests/vM7nH0Kl.m3u8")! // must be HTTPS
+        player = AVPlayer(url: url)
+        playerLayer = AVPlayerLayer(player: player)
+        playerLayer.videoGravity = .resize
+        videoView.layer.addSublayer(playerLayer)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        player.play()
+        player.isMuted = true
     }
-
-
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        playerLayer.frame = videoView.bounds // for device rotation
+    }
 }
 
