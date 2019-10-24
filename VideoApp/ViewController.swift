@@ -1,7 +1,3 @@
-//
-//  ViewController.swift
-//  VideoApp
-//
 //  Created by Cesare de Cal on 1/10/18.
 //  Copyright © 2018 cesare.io. All rights reserved.
 //
@@ -70,4 +66,3 @@ class ViewController: UIViewController {
         player.seek(to: time)
     }
 }
-
